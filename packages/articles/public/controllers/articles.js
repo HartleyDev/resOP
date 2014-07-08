@@ -1,8 +1,13 @@
 'use strict';
 
-angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles',
-    function($scope, $stateParams, $location, Global, Articles) {
+angular.module('mean.articles').controller('ArticlesController', ['$rootScope', '$scope', '$stateParams', '$location', 'Global', 'Articles',
+    function($rootScope, $scope, $stateParams, $location, Global, Articles) {
         $scope.global = Global;
+        
+        $scope.changeSearch = function(val){
+          $rootScope.searchVal = val;
+        };
+
 
         $scope.hasAuthorization = function(article) {
             if (!article || !article.user) return false;

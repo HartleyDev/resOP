@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://localhost/mean-prod',
     app: {
-        name: 'resOP - Recipes for life!'
+        name: 'resOP - Resources for life!'
     },
     facebook: {
         clientID: 'APP_ID',
